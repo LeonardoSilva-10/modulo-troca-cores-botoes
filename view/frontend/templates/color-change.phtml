@@ -1,0 +1,18 @@
+<?php
+use Magento\Framework\App\ObjectManager;
+
+$data = ObjectManager::getInstance()->create('\Leonardo\Test\Helper\Data');
+$storeId = ObjectManager::getInstance()->create('\Magento\Store\Model\StoreManagerInterface');
+$color = $data->getColor($storeId->getStore()->getId());
+?>
+<?php if ($color): ?>
+<style>
+    :root {
+        --colorHex: <?= $color; ?>;
+    }
+    button {
+        background-color: var(--colorHex) !important;
+    }
+</style>
+<?php endif; ?>
+

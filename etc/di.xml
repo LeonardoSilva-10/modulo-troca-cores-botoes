@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd"
+>
+    <!-- Color Change -->
+    <type name="Leonardo\Test\Console\Command\ColorChange">
+        <arguments>
+            <argument name="name" xsi:type="string">color:change</argument>
+        </arguments>
+    </type>
+    <type name="Magento\Framework\Console\CommandListInterface">
+        <arguments>
+            <argument name="commands" xsi:type="array">
+                <item
+                    name="colorChange"
+                    xsi:type="object">Leonardo\Test\Console\Command\ColorChange</item>
+            </argument>
+        </arguments>
+    </type>
+    <!-- Color Delete -->
+    <type name="Leonardo\Test\Console\Command\ColorDelete">
+        <arguments>
+            <argument name="name" xsi:type="string">color:delete</argument>
+        </arguments>
+    </type>
+    <type name="Magento\Framework\Console\CommandListInterface">
+        <arguments>
+            <argument name="commands" xsi:type="array">
+                <item
+                    name="colorDelete"
+                    xsi:type="object">Leonardo\Test\Console\Command\ColorDelete</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

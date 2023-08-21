@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd"
+>
+    <table
+        name="leonardo_test_color_button"
+        resource="default"
+        engine="innodb"
+        comment="Change Color Buttons"
+    >
+        <column
+            xsi:type="int"
+            name="entity_id"
+            unsigned="true"
+            nullable="false"
+            identity="true"
+            comment="Entity ID"
+        />
+        <column
+            xsi:type="varchar"
+            name="color_hex"
+            nullable="false"
+            length="64"
+            default="simple"
+            comment="Type ID"
+        />
+        <column
+            xsi:type="varchar"
+            name="store_id"
+            nullable="false"
+            length="64"
+            comment="Store ID"
+        />
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="entity_id"/>
+        </constraint>
+    </table>
+</schema>

@@ -1,0 +1,22 @@
+{
+    "name": "leonardo/module-test",
+    "description": "Module to change color using console",
+    "version": "1.0.0",
+    "type": "magento2-module",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Leonardo Ferreira",
+            "email": "leoo03863@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Leonardo\\Test\\": ""
+        }
+    }
+}
